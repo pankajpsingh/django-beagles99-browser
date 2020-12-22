@@ -1,0 +1,116 @@
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top nav-down navbar-default" color-on-scroll="500">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="https://demos.creative-tim.com/paper-kit-2-pro/index.html" rel="tooltip" title="Paper Kit 2 PRO" data-placement="bottom" target="_blank">
+          Paper Kit 2 Pro {{ self.get_site.site_name }}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" data-nav-image="./assets/img/blurred-image-1.jpg" data-color="orange">
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+              Link 1 </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-danger">
+              <a href="javascript:;" class="dropdown-item">
+                Sub link 1
+              </a>
+              <a href="javascript:;" class="dropdown-item">
+                Sub link 2
+              </a>
+              <a href="javascript:;" class="dropdown-item">
+                Sub link 3
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="navbarDropdownMenuLink1" data-toggle="dropdown">
+              Link 2
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-round btn-danger" href="https://www.creative-tim.com/product/paper-kit-2-pro" target="_blank">
+              <i class="nc-icon nc-cart-simple"></i> Link 3
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+{% comment %}
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="/media/original_images/99.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            Beagles
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {% for menu in menu_items %}
+                    {% if menu.value.sub_nav %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ menu.value.title }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% for sub_menu in menu.value.sub_nav %}
+                                    {% if sub_menu.value.link %}
+                                        <a class="dropdown-item" href="{{ sub_menu.value.link }}">{{ sub_menu.value.override_title }}</a>
+                                    {% elif sub_menu.value.page %}
+                                        <a class="dropdown-item" href="{{ sub_menu.value.page.url }}">{{ sub_menu.value.override_title }}</a>
+                                    {% else %}
+                                        <a class="dropdown-item" href="{{ sub_menu.value.page.url }}">{{ sub_menu.value.override_title }}</a>
+                                    {% endif %}
+                                {% endfor %}
+                                <!--
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                -->
+                            </div>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            {% if menu.value.link %}
+                                <a class="nav-link" href="{{ menu.value.link }}">{{ menu.value.override_title }}</a>
+                            {% elif menu.value.page %}
+                                <a class="nav-link" href="{{ menu.value.page.url }}">{{ menu.value.override_title }}</a>
+                            {% else %}
+                                <a class="nav-link" href="{{ menu.value.link }}">{{ menu.value.override_title }}</a>
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+            <ul>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            </ul>
+            <ul>
+
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+    </div>
+</nav>
+{% endcomment %}
+

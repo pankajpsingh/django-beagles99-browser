@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags navigation_tags wagtailimages_tags %}
+
+{% block content %}
+    {% include "home/include/header-index.html" %}
+
+    {% if tag %}
+        <div class="row">
+            <div class="col-md-12">
+                <p>Viewing all blog posts by <span class="outline">{{ tag }}</span></p>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="container">
+
+        {% if page.get_child_tags %}
+            <div class="nav-scroller py-1 mb-2">
+                <nav class="nav d-flex justify-content-between"> Tags:
+                    {% for tag in page.get_child_tags %}
+                        <a class="p-2 text-muted" href="{{ tag.url }}">{{ tag }}</a>
+                    {% endfor %}
+                </nav>
+            </div>
+        {% endif %}
+
+        {% if posts %}
+            {% for post in posts %}
+                {% if forloop.first %}
+                    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+                        <div class="col-md-6 px-0">
+                            <h1 class="display-4 font-italic">{{ post.title }}</h1>
+                            <div class="mb-1 text-muted">
+                                {% if post.date_published %}
+                                    {{ post.date_published }} by
+                                {% endif %}
+                                {% for author in post.authors %}
+                                    {{ author }}{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </div>
+                            <p class="lead my-3">{{ post.introduction|truncatewords:22 }}</p>
+                            <p>
+                                {% for tag in post.blog_tags.all %}
+                                    <a href="{% slugurl 'tags' %}?tag={{ tag }}"><span class="badge badge-secondary">{{ tag }}</span></a>
+                                {% endfor %}
+                            </p>
+                            <p class="lead mb-0"><a href="{% pageurl post %}" class="text-white font-weight-bold">Continue reading...</a></p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div class="row row-eq-height mb-2">
+                {% for post in posts %}
+                    {% if not forloop.first %}
+                        <div class="col-md-6">
+                            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <h3 class="mb-0">{{ post.title }}</h3>
+                                    <div class="mb-1 text-danger">
+                                        {% if post.date_published %}
+                                            {{ post.date_published }} by
+                                        {% endif %}
+                                        {% for author in post.authors %}
+                                            {{ author }}{% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <p class="card-text mb-auto">{{ post.introduction|truncatewords:22 }}</p>
+                                    <p>
+                                        {% for tag in post.blog_tags.all %}
+                                            <a href="{% slugurl 'tags' %}?tag={{ tag }}"><span class="badge badge-secondary">{{ tag }}</span></a>
+                                        {% endfor %}
+                                    </p>
+                                    <a href="{% pageurl post %}" class="stretched-link">Continue reading</a>
+                                </div>
+                                <div class="col-auto d-none d-lg-block">
+                                    {% image post.image fill-200x250 %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="col-md-12">
+                <p>Oh, snap. Looks like we have no blog posts. Sorry.</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}

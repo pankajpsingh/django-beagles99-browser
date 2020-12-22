@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags navigation_tags wagtailimages_tags %}
+
+{% block content %}
+    {% include "home/include/header-index.html" %}
+
+    <div class="container">
+        {% if tag %}
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Viewing all prizes by <span class="outline">{{ tag }}</span></p>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if page.get_child_tags %}
+            <ul class="blog-tags tags list-inline">
+                {% for tag in page.get_child_tags %}
+                    <li><a href="{{ tag.url }}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <div class="row row-eq-height prize-list">
+            {% if prizes %}
+                {% for prize in prizes %}
+                    <li class="col-xs-12 col-sm-6 col-md-3 blog-list-item">
+                        <a href="{% pageurl prize %}">
+                            <div class="image">
+                                {% image prize.image fill-850x450-c50 as image %}
+                                <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}" class="" />
+                            </div>
+                            <div class="text">
+                                <h2 class="blog-list-title">{{ prize.title }}</h2>
+                                <p>{{ prize.introduction|truncatewords:15 }}</p>
+                            </div>
+                            <div class="small footer">
+                                {% if prize.date_published %}
+                                    {{ prize.date_published }} by
+                                {% endif %}
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    <p>Oh, snap. Looks like there are no prize posts. Sorry.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}

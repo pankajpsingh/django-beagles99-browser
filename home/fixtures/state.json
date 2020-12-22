@@ -1,0 +1,412 @@
+[
+  {
+    "model": "contact.State",
+    "pk": 1,
+    "fields": {
+      "state_name": "Andaman and Nicobar",
+      "gst_state_code": "35",
+      "country_name": "India",
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 2,
+    "fields": {
+      "state_name": "Andhra Pradesh",
+      "gst_state_code": "37",
+      "country_name": "India",
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 3,
+    "fields": {
+      "state_name": "Arunachal Pradesh",
+      "gst_state_code": "12",
+      "country_name": "India",
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 4,
+    "fields": {
+      "state_name": "Assam",
+      "gst_state_code": "18",
+      "country_name": "India",
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 5,
+    "fields": {
+      "state_name": "Bihar",
+      "gst_state_code": "10",
+      "odoo_state_id": "581",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 6,
+    "fields": {
+      "state_name": "Chattisgarh",
+      "gst_state_code": "22",
+      "odoo_state_id": "583",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 7,
+    "fields": {
+      "state_name": "Chandigarh",
+      "gst_state_code": "04",
+      "odoo_state_id": "582",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 8,
+    "fields": {
+      "state_name": "Daman and Diu",
+      "gst_state_code": "25",
+      "odoo_state_id": "585",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 9,
+    "fields": {
+      "state_name": "Delhi",
+      "gst_state_code": "07",
+      "odoo_state_id": "586",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 10,
+    "fields": {
+      "state_name": "Dadra and Nagar Haveli",
+      "gst_state_code": "26",
+      "odoo_state_id": "584",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 11,
+    "fields": {
+      "state_name": "Goa",
+      "gst_state_code": "30",
+      "odoo_state_id": "587",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 12,
+    "fields": {
+      "state_name": "Gujarat",
+      "gst_state_code": "24",
+      "odoo_state_id": "588",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 13,
+    "fields": {
+      "state_name": "Himachal Pradesh",
+      "gst_state_code": "02",
+      "odoo_state_id": "590",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 14,
+    "fields": {
+      "state_name": "Haryana",
+      "gst_state_code": "06",
+      "odoo_state_id": "589",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 15,
+    "fields": {
+      "state_name": "Jharkhand",
+      "gst_state_code": "20",
+      "odoo_state_id": "592",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 16,
+    "fields": {
+      "state_name": "Jammu and Kashmir",
+      "gst_state_code": "99",
+      "odoo_state_id": "591",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 17,
+    "fields": {
+      "state_name": "Karnataka",
+      "gst_state_code": "29",
+      "odoo_state_id": "593",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 18,
+    "fields": {
+      "state_name": "Kerala",
+      "gst_state_code": "32",
+      "odoo_state_id": "594",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 19,
+    "fields": {
+      "state_name": "Lakshadweep",
+      "gst_state_code": "31",
+      "odoo_state_id": "595",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 20,
+    "fields": {
+      "state_name": "Maharashtra",
+      "gst_state_code": "27",
+      "odoo_state_id": "597",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 21,
+    "fields": {
+      "state_name": "Meghalaya",
+      "gst_state_code": "17",
+      "odoo_state_id": "599",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 22,
+    "fields": {
+      "state_name": "Manipur",
+      "gst_state_code": "14",
+      "odoo_state_id": "598",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 23,
+    "fields": {
+      "state_name": "Madhya Pradesh",
+      "gst_state_code": "23",
+      "odoo_state_id": "596",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 24,
+    "fields": {
+      "state_name": "Mizoram",
+      "gst_state_code": "15",
+      "odoo_state_id": "600",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 25,
+    "fields": {
+      "state_name": "Nagaland",
+      "gst_state_code": "13",
+      "odoo_state_id": "601",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 26,
+    "fields": {
+      "state_name": "Odisha",
+      "gst_state_code": "21",
+      "odoo_state_id": "602",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 27,
+    "fields": {
+      "state_name": "Punjab",
+      "gst_state_code": "03",
+      "odoo_state_id": "604",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 28,
+    "fields": {
+      "state_name": "Puducherry",
+      "gst_state_code": "34",
+      "odoo_state_id": "603",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 29,
+    "fields": {
+      "state_name": "Rajasthan",
+      "gst_state_code": "08",
+      "odoo_state_id": "605",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 30,
+    "fields": {
+      "state_name": "Sikkim",
+      "gst_state_code": "11",
+      "odoo_state_id": "606",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 31,
+    "fields": {
+      "state_name": "Tamil Nadu",
+      "gst_state_code": "33",
+      "odoo_state_id": "607",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 32,
+    "fields": {
+      "state_name": "Tripura",
+      "gst_state_code": "16",
+      "odoo_state_id": "609",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 33,
+    "fields": {
+      "state_name": "Telangana",
+      "gst_state_code": "36",
+      "odoo_state_id": "608",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 34,
+    "fields": {
+      "state_name": "Uttarakhand",
+      "gst_state_code": "05",
+      "odoo_state_id": "611",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 35,
+    "fields": {
+      "state_name": "Uttar Pradesh",
+      "gst_state_code": "09",
+      "odoo_state_id": "610",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 36,
+    "fields": {
+      "state_name": "West Bengal",
+      "gst_state_code": "19",
+      "odoo_state_id": "612",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 37,
+    "fields": {
+      "state_name": "C/O 99 APO",
+      "gst_state_code": "19",
+      "odoo_state_id": "612",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  },
+  {
+    "model": "contact.State",
+    "pk": 38,
+    "fields": {
+      "state_name": "C/O 56 APO",
+      "gst_state_code": "07",
+      "odoo_state_id": "586",
+      "country_name": "India",
+      "odoo_country_id": "104"
+    }
+  }
+]

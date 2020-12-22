@@ -1,0 +1,95 @@
+{% load static wagtailuserbar %}
+{% load nav_menu_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon.png' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>
+        {% block title %}
+            {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+            {% with self.get_site.site_name as site_name %}
+                {% if site_name %}- {{ site_name }}{% endif %}
+            {% endwith %}
+        {% endblock %}
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/paper-kit.css?v=2.3.1' %}" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="{% static 'assets/demo/demo.css' %}" rel="stylesheet" />
+    <meta name="description" content="" />
+
+    {# Global stylesheets #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/beagles99.css' %}">
+    {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+{% get_nav_menu 'top' %}
+{% wagtailuserbar %}
+
+{% block content %}{% endblock %}
+
+<div class="wrapper" style="height:100vh;">
+    How is this rendered?
+</div>
+<footer class="footer footer-black">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="https://www.creative-tim.com" target="_blank">Creative Tim</a></li>
+                    <li><a href="http://blog.creative-tim.com/" target="_blank">Blog</a></li>
+                    <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+                </ul>
+            </nav>
+            <div class="credits ml-auto">
+          <span class="copyright">
+            © <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+          </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--   Core JS Files   -->
+<script src="{% static 'assets/js/core/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="{% static 'assets/js/plugins/bootstrap-switch.js' %}"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="{% static 'assets/js/plugins/nouislider.min.js' %}" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://flatpickr.js.org/ -->
+<script src="{% static 'assets/js/plugins/moment.min.js' %}"></script>
+<!-- Control Center for Paper UI Kit: parallax effects, scripts for the example pages etc -->
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=your-API-key"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="{% static 'assets/js/paper-kit.min.js?v=2.3.1' %}" type="text/javascript"></script>
+
+{# Global javascript #}
+<script type="text/javascript" src="{% static 'js/beagles99.js' %}"></script>
+
+{% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+{% endblock %}
+</body>
+</html>

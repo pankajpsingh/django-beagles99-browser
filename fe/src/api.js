@@ -1,0 +1,44 @@
+import { GraphQLProvider, reportCacheErrors } from "graphql-svelte";
+
+const client = GraphQLProvider({
+    url: '<http://www.99beagles.com/graphql>',
+    headers: () => ({
+        "content-type": "application/json",
+        Accept: 'application/json'
+    })
+})
+
+client.graphql.on('cache', reportCacheErrors)
+
+
+// our first query will requests all movies
+// with only given fields
+// note the usage of string literals (')
+export const MOVIE_LIST_QUERY = `
+    query BlogIndexPage{
+        movieList{
+            name, posterUrl, slug
+        }
+    }
+`
+/*
+// Note the usage of argument.
+// the exclamation mark makes the slug argument as required
+// without it , argument will be optional
+
+export const BLOG_QUERY = '
+    query movie($slug:String!){
+        movie(slug:$slug){
+            id, name, year, summary, posterUrl, slug
+        }
+    }
+'
+// This is generic query function
+// We will use this with one of the above queries and
+// variables if needed
+export async function get(query, variables = null) {
+    const response =  await client.get({ query , variables })
+    console.log("response", response);
+    return response
+}
+*/

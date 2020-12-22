@@ -1,0 +1,42 @@
+[
+  {
+    "model": "currency.Currency",
+    "pk": 1,
+    "fields": {
+      "curr_code": "INR",
+      "curr_name": "Indian Rupee"
+    }
+  },
+  {
+    "model": "currency.Currency",
+    "pk": 2,
+    "fields": {
+      "curr_code": "USD",
+      "curr_name": "US Dollar"
+    }
+  },
+  {
+    "model": "currency.Currency",
+    "pk": 3,
+    "fields": {
+      "curr_code": "GBP",
+      "curr_name": "UK Pound"
+    }
+  },
+  {
+    "model": "currency.Currency",
+    "pk": 4,
+    "fields": {
+      "curr_code": "SD",
+      "curr_name": "Sing Dollar"
+    }
+  },
+  {
+    "model": "currency.Currency",
+    "pk": 5,
+    "fields": {
+      "curr_code": "EUR",
+      "curr_name": "Euro"
+    }
+  }
+]
